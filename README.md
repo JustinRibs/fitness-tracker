@@ -27,6 +27,19 @@ Open **http://localhost:3001** — static files and API share one port.
 
 Override DB path: `DB_PATH=/path/to/file.db`. Override port: `PORT=8080`.
 
+## Docker
+
+Requires [Docker](https://docs.docker.com/get-docker/) with Compose v2.
+
+```bash
+docker compose up --build
+```
+
+Open **http://localhost:3939** (API + static UI on one port). Data persists in the named volume `fitness_data` (SQLite under `/app/data` in the container).
+
+- Change the **host** port: `HOST_PORT=8080 docker compose up`
+- Override DB file path in the container: set `DB_PATH` under `environment` in `docker-compose.yml`
+
 ## Profile
 
 Open **Profile** in the bottom nav to set name, birthday, age, and body weight (stored in SQLite). Choose **Pounds** or **Kilograms** as the default unit for exercise weights when logging (defaults to lb). Optionally set a **weekly workout goal** (sessions per Monday–Sunday week). On your birthday, the home screen shows a short greeting.
