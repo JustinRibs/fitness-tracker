@@ -1,3 +1,4 @@
+import { randomUUID } from '../lib/randomUUID'
 import type { RoutineItem } from '../types'
 
 type Props = {
@@ -8,7 +9,7 @@ type Props = {
 }
 
 function emptyItem(): RoutineItem {
-  return { id: crypto.randomUUID(), exerciseName: '', sets: '', reps: '' }
+  return { id: randomUUID(), exerciseName: '', sets: '', reps: '' }
 }
 
 export function RoutineLinesEditor({ items, onChange, hint }: Props) {
