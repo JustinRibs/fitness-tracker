@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --color-surface: #0f1412;
+  --color-surface-2: #1a221e;
+  --color-surface-3: #24302a;
+  --color-border: #2d3d35;
+  --color-muted: #8fa396;
+  --color-fg: #e8f0eb;
+  --color-accent: #34d399;
+  --color-accent-dim: #059669;
+}
+
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background: var(--color-surface);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100dvh;
+}
